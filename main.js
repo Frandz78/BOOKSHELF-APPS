@@ -243,6 +243,7 @@ function findBook(bookId) {
   return null;
 }
 
+// Fungsi untuk menampilkan form edit buku
 function showEditForm(bookId) {
   const bookTarget = findBook(bookId);
 
@@ -263,22 +264,21 @@ function showEditForm(bookId) {
   saveData();
 }
 
-// Fungsi untuk menampilkan form edit buku
-function showEditForm(bookId) {
-  const bookTarget = findBook(bookId);
+// function showEditForm(bookId) {
+//   const bookTarget = findBook(bookId);
 
-  if (!bookTarget) return;
+//   if (!bookTarget) return;
 
-  // Mengisi nilai form edit dengan data buku yang ada
-  document.getElementById("editBookId").value = bookTarget.id;
-  document.getElementById("editBookTitle").value = bookTarget.title;
-  document.getElementById("editBookAuthor").value = bookTarget.author;
-  document.getElementById("editBookYear").value = bookTarget.year;
-  document.getElementById("editBookIsComplete").checked = bookTarget.isComplete;
+//   // Mengisi nilai form edit dengan data buku yang ada
+//   document.getElementById("editBookId").value = bookTarget.id;
+//   document.getElementById("editBookTitle").value = bookTarget.title;
+//   document.getElementById("editBookAuthor").value = bookTarget.author;
+//   document.getElementById("editBookYear").value = bookTarget.year;
+//   document.getElementById("editBookIsComplete").checked = bookTarget.isComplete;
 
-  // Menampilkan form edit
-  document.getElementById("editBookSection").style.display = "block";
-}
+//   // Menampilkan form edit
+//   document.getElementById("editBookSection").style.display = "block";
+// }
 
 // Menambahkan buku ke rak selesai dibaca
 function addBookToCompleted(bookId) {
